@@ -16,5 +16,10 @@ public class Main {
         Point point = new Point(0,0);
 
         System.out.println("distance()= " + point.distance());
+
+        Player pl = new Player("bru", -110, Player.Weapon.MACHINE_GUN);
+        System.out.println(pl);
+
+
     }
 }
