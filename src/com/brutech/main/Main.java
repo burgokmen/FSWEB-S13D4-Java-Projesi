@@ -3,7 +3,7 @@ package com.brutech.main;
 public class Main {
     public static void main(String[] args) {
 
-        Point first = new Point(6, 5);
+       /* Point first = new Point(6, 5);
 
         Point second = new Point(3, 1);
 
@@ -15,10 +15,16 @@ public class Main {
 
         Point point = new Point(0,0);
 
-        System.out.println("distance()= " + point.distance());
+        System.out.println("distance()= " + point.distance());*/
 
-        Player pl = new Player("bru", -110, Player.Weapon.MACHINE_GUN);
+        Player pl = new Player("bru", 80, Player.Weapon.MACHINE_GUN);
+        System.out.println(pl.healthRemaining());
+        System.out.println(pl.loseHealth(90));
+        System.out.println(pl.restoreHealth(110));
+        System.out.println(pl.loseHealth(20));
+        pl.loseHealth(20);
         System.out.println(pl);
+
 
 
     }

@@ -28,20 +28,20 @@ public class Player {
         return healthPercentage;
     }
 
-    public void loseHealth(int damage){
+    public int loseHealth(int damage){
        int health = healthRemaining() - damage;
 
         if(health <= 0){
             System.out.println(name + " player has been knocked out of game");
 
         }
-        this.healthPercentage = Math.max(health, 0);
+        return this.healthPercentage = Math.max(health, 0);
 
     }
 
-    public void restoreHealth(int healthPotion){
+    public int restoreHealth(int healthPotion){
         int health = healthRemaining() + healthPotion;
-        this.healthPercentage = Math.min(100, health);
+        return this.healthPercentage = Math.min(100, health);
 
     }
 
